@@ -44,8 +44,8 @@ INSTALLED_APPS = [
 #    'users.apps.UsersConfig', # new
 ]
 
-if DEBUG:
-    INSTALLED_APPS += ['django_extension', ]
+#if DEBUG:
+#    INSTALLED_APPS += ['django_extension', ]
 
 
 APPS = ["core", "goals", "bot", "drf_yasg"]

@@ -22,4 +22,7 @@ class SendMessageResponse(BaseModel):
 
 class GetUpdatesResponse(BaseModel):
     ok: bool
-    result: list[UpdateObj]
+    result: list[UpdateObj] = []
+
+    class Config:
+        arbitrary_types_allowed = True

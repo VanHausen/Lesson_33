@@ -1,4 +1,3 @@
-
 from django.core.management import BaseCommand
 from django.template.base import logger
 
