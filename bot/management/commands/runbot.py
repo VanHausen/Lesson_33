@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.core.management import BaseCommand
 from django.template.base import logger
 
@@ -10,7 +11,7 @@ class Command(BaseCommand):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.tg_client = TgClient()
+        self.tg_client = TgClient(settings.BOT_TOKEN)
 
     def handle(self, *args, **options):
         offset = 0
@@ -38,9 +39,3 @@ class Command(BaseCommand):
 
     def handle_authorized(self, tg_user: TgUser, msg: Message):
         logger.info('AUTHORIZED')
-
-
-
-
-
-
